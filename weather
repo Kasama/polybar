@@ -1,0 +1,27 @@
+#!/bin/python
+
+import urllib.request
+
+# city = "Sao Carlos"
+city_id = "3449319"
+api_key = "33c212f63bfea5ddb93bc0fb85132db7"
+units = "Metric"
+unit_key = "C"
+api_base = "http://api.openweathermap.org/data/2.5/weather"
+api_query = "?id={}&APPID={}&units={}".format(city_id, api_key, units)
+
+api_call = api_base + api_query
+
+try:
+    request = urllib.request.urlopen(api_call).read()
+
+    weather = eval(str(request)[2:-1])
+
+    info = weather["weather"][0]["description"].capitalize()
+    temp = int(float(weather["main"]["temp"]))
+
+    print("%s, %i °%s" % (info, temp, unit_key))
+except:
+    print("")
+
+# vim ft=python
