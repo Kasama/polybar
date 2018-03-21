@@ -10,7 +10,7 @@ urgbg = #ff8888
 
 [bar/top]
 ; {
-monitor = eDP-1
+monitor =
 height = 25
 width = 100%
 offset-x = 40
@@ -23,7 +23,7 @@ overline-color = #f00
 
 spacing = 0
 # padding-right = 60
-padding-right = 55
+padding-right = 3
 module-margin-right = 2
 module-margin-left = 2
 
@@ -41,9 +41,9 @@ font-3 = Wuncon Siji:size:10;1.5
 tray-position = right
 tray-detached = true
 tray-maxsize = 16
-tray-transparent = true
-tray-offset-x = -50
-tray-offset-y = -6
+tray-transparent = false
+tray-offset-x = -110
+tray-offset-y = -4
 
 modules-left = i3 music
 modules-center = date weather
@@ -263,7 +263,8 @@ type = internal/xbacklight
 
 ; XRandR output to get get values from
 ; Default: the monitor defined for the running bar
-output = eDP-1
+; output = eDP-1
+; output = HDMI-1
 
 ; Create scroll handlers used to set the backlight value
 ; Default: true
