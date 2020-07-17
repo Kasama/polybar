@@ -33,10 +33,14 @@ scroll-down = i3wm-wsprev
 # override-redirect = true
 # wm-restack = i3
 
+# Icons
 font-0 = FontAwesome:size=10;0
-font-1 = xos4 terminus:pixelsize=10;
-font-2 = unifont:fontformat=truetype:size=10:antialias=false;0
-font-3 = Wuncon Siji:size:10;1.5
+# Normal font
+font-1 = Noto Sans:size=10:antialias=true;0
+# Some symbols
+font-2 = Wuncon Siji:size:10;1.5
+# Japanese support (band names and stuff)
+font-3 = Noto Sans CJK JP:size=10:antialias=true;0
 
 tray-position = right
 tray-detached = true
@@ -141,9 +145,9 @@ fuzzy-match = true
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;/b/
+ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;5
+ws-icon-4 = 5;/b/
 ws-icon-5 = 6;6
 ws-icon-6 = 7;u
 ws-icon-7 = 8;8

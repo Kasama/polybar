@@ -11,7 +11,7 @@ stoppedColor="%{F#65737E}" # Gray
 
 player_status=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata artist) - $(playerctl metadata title)"
+    metadata="$(playerctl metadata artist 2> /dev/null) - $(playerctl metadata title 2> /dev/null)"
 else
 	metadata="No music playing"
 fi
