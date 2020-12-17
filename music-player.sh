@@ -9,9 +9,16 @@ playingColor="%{F#78a090}" # Orange
 pausedColor="%{F#65737E}" # Gray
 stoppedColor="%{F#65737E}" # Gray
 
-player_status=$(playerctl status 2> /dev/null)
+ignoredPlayers="firefox,chromium"
+
+if [ "$#" -gt 0 ]; then
+  playerctl -i "$ignoredPlayers" $@ 2> /dev/null
+  exit $?
+fi
+
+player_status=$(playerctl -i "$ignoredPlayers" status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata artist 2> /dev/null) - $(playerctl metadata title 2> /dev/null)"
+    metadata="$(playerctl -i "$ignoredPlayers" metadata artist 2> /dev/null) - $(playerctl -i "$ignoredPlayers" metadata title 2> /dev/null)"
 else
 	metadata="No music playing"
 fi

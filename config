@@ -317,10 +317,10 @@ exec = ~/.config/polybar/weather
 ; {
 type = custom/script
 interval = 2
-label = %output:0:50:...%
+label = %output:0:80:...%
 exec = ~/.config/polybar/music-player.sh
-click-left = playerctl play-pause
-click-right = playerctl next
+click-left = ~/.config/polybar/music-player.sh play-pause
+click-right = ~/.config/polybar/music-player.sh next
 ; }
 
 ; vim: ft=dosini
