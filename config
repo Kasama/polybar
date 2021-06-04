@@ -27,8 +27,8 @@ padding-right = 3
 module-margin-right = 2
 module-margin-left = 2
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsprev
+scroll-down = i3wm-wsnext
 
 # override-redirect = true
 # wm-restack = i3
@@ -49,7 +49,7 @@ tray-transparent = false
 tray-offset-x = -110
 tray-offset-y = -4
 
-modules-left = i3 music
+modules-left = i3 mic music
 modules-center = date weather
 modules-right = battery
 ; }
@@ -321,6 +321,15 @@ label = %output:0:80:...%
 exec = ~/.config/polybar/music-player.sh
 click-left = ~/.config/polybar/music-player.sh play-pause
 click-right = ~/.config/polybar/music-player.sh next
+; }
+
+[module/mic]
+; {
+type = custom/script
+interval = 1
+label = %output%
+exec = ~/.config/polybar/mic-control.sh
+click-left = ~/.config/polybar/mic-control.sh toggle
 ; }
 
 ; vim: ft=dosini
