@@ -27,8 +27,8 @@ padding-right = 3
 module-margin-right = 2
 module-margin-left = 2
 
-scroll-up = i3wm-wsprev
-scroll-down = i3wm-wsnext
+scroll-up = #i3.prev
+scroll-down = #i3.next
 
 # override-redirect = true
 # wm-restack = i3
