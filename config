@@ -47,6 +47,9 @@ tray-detached = true
 tray-maxsize = 16
 tray-transparent = false
 tray-offset-x = -110
+
+# alternative home setup
+# tray-offset-x = -310
 tray-offset-y = -4
 
 modules-left = i3 mic music
