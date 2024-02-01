@@ -338,7 +338,7 @@ click-left = ~/.config/polybar/mic-control.sh toggle
 type = custom/script
 interval = 1
 label = %output:0:80:...%
-exec = ~/.cargo/bin/dactyl-remote-control --vid 0x4B41 --pid 0x636D print-keyboard-layer
+exec = [ -x ~/.cargo/bin/dactyl-remote-control ] && ~/.cargo/bin/dactyl-remote-control --vid 0x4B41 --pid 0x636D print-keyboard-layer
 
 ; }
 
