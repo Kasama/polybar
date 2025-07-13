@@ -9,7 +9,7 @@ playingColor="%{F#78a090}" # Orange
 pausedColor="%{F#65737E}" # Gray
 stoppedColor="%{F#65737E}" # Gray
 
-ignoredPlayers="firefox,chromium"
+ignoredPlayers="firefox,chromium,kdeconnect"
 
 if [ "$#" -gt 0 ]; then
   playerctl -i "$ignoredPlayers" $@ 2> /dev/null
