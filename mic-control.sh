@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 onColor="%{F#78a090}" # #78a090 Green
 offColor="%{F#D08770}" # #D08770 Red
