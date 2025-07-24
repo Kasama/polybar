@@ -21,7 +21,11 @@ if [ $# -eq 0 ]; then
     { "text": "$icon", "tooltip": "toggle mute", "class": "$class" }
 EOC
   else # Probably polybar
-    color="${onColor}${icon}"
+    color="${onColor}"
+    if [ "$mic_muted" = "yes" ]; then
+      color="${offColor}"
+    fi
+    color="${color}${icon}"
     echo "$color"
   fi
 fi
